@@ -1,0 +1,35 @@
+# Site settings
+title: Fractal.Global
+email: info@fractal.global
+description: > # this means to ignore newlines until "baseurl:"
+    Fractal.Global
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://fractal.global" # the base hostname & protocol for your site
+twitter_username: 
+github_username:  FractalGlobal
+
+# Build settings
+markdown: kramdown
+sass:
+    style: compressed
+paginate: 2
+paginate_path: "/blog/page/:num"
+
+permalink: "/blog/:title/"
+
+
+docs: &docs 
+  group: "docs"
+  title: "Docs"
+  url: "/docs/getting-started/install/"
+  subgroups:
+   - group: "getting-started"
+     title: "Getting started"
+   - group: "api"
+     title: "API"
+
+
+nav-groups:
+ - group: "nav"
+#   subgroups:
+#    - *docs

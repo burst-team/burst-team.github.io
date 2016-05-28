@@ -1,0 +1,56 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="container">
+	<!-- This loops through the paginated posts -->
+	{% for post in paginator.posts %}
+	<div class="card primary-text text-darken-2 white">
+		<div class="card-content">
+			<span class="card-title accent-text">{{ post.title }}</span>
+			<br>
+			<i>{{ post.date | date: "%b %d, %Y" }}</i>
+		</div>
+		<div class="divider"></div>
+		<div class="card-content">
+			{{ post.excerpt }}
+		</div>
+		<div class="card-action">
+			<a> &nbsp; </a>
+			<a class="internal-link right accent-text btn-flat waves-effect" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+		</div>
+	</div>
+	
+	{% endfor %}
+
+	<!-- Pagination links -->
+	{% if paginator.total_pages > 1 %}
+	<div class="center">
+		{% if paginator.previous_page %}
+		<a class="internal-link btn-floating btn-large waves-effect waves-light primary" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+		{% else %}
+		<a class="disabled btn-floating btn-large waves-effect waves-light primary">&laquo;</a>
+		{% endif %}
+
+		{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		<a class="btn-floating btn-large waves-effect waves-light primary-text white">{{ page }}</a>
+		{% elsif page == 1 %}
+		<a  class="internal-link btn-floating btn-large waves-effect waves-light primary" href="{{ site.baseurl }}/blog/">{{ page }}</a>
+		{% else %}
+		<a  class="internal-link btn-floating btn-large waves-effect waves-light primary" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+		{% endif %}
+		{% endfor %}
+
+		{% if paginator.next_page %}
+		<a class="internal-link btn-floating btn-large waves-effect waves-light primary" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
+		{% else %}
+		<a class="disabled btn-floating btn-large waves-effect waves-light primary">&raquo;</a>
+		{% endif %}
+	</div>
+	{% endif %}
+	
+	
+	
+</div>

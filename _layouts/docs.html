@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	{% assign docsPage = true %}
+	
+	{% include head.html %}
+	{% include header.html %}
+	<ul class="side-nav fixed">
+		{% assign navType = 'docs' %}
+		{% include nav.html %}
+	</ul>
+	<div id="docs-header">
+		{{ page.title }}
+	</div>
+	<div id="docs-content" class="row">
+		<div class="col m12 {% if page.sidebar == 'fixed' %} l9 {% endif %}" id="docs-item-content">
+			{{ content }}
+		</div>
+		{% if page.sidebar == 'fixed' %}
+		<div class="hide-on-med-and-down" id="docs-anchor">
+			<ul class="card-panel white accent-text">
+				<li><a>Link</a></li>
+				<li><a>Link</a></li>
+				{% for anchor in page.anchors %}
+					{% if anchor.divider == true %}
+						<li class="divider"></li>
+					{% else %}
+						<li><a href="{{ anchor.url }}">{{ anchor.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+	</div>
+	{% include footer.html %}
+	{% include jsLinks.html %}
+</html>

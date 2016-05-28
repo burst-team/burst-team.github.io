@@ -1,0 +1,61 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+group: "nav"
+---
+
+<br>
+<div class="row">
+	<form class="col s12 m8 offset-m2" id="contact-form" action="//formspree.io/irontiga@gmail.com">
+		<div class="card-panel" style="padding:25px;">
+			<h4 class="accent-text thin">Contact us</h4>
+			<input type="text" name="_gotcha" style="display:none" />
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="first_name" type="text" class="validate" name="first_name">
+					<label for="first_name">First Name</label>
+				</div>
+				<div class="input-field col s6">
+					<input id="last_name" type="text" class="validate" name="last_name">
+					<label for="last_name">Last Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<input id="email" type="email" class="validate" name="_replyto">
+					<label for="email">Email</label>
+				</div>
+				<div class="input-field col s6">
+					<input id="subject" type="text" class="validate" name="_subject" >
+					<label for="subject">Subject</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="message" class="materialize-textarea" name="message"></textarea>
+					<label for="message">Message</label>
+				</div>
+			</div>
+			<input type="hidden" name="_cc" value="jason@crowetic.com" />
+			<button class="btn-flat accent-text text-darken-2 waves-effect right" type="submit" id="contact-submit">
+				Submit <i class="material-icons right">send</i>
+			</button>
+			<div class="preloader-wrapper small active hidden right" id="contact-loading">
+				<div class="spinner-layer spinner-cyan-only">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div><div class="gap-patch">
+					<div class="circle"></div>
+					</div><div class="circle-clipper right">
+					<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+	</form>
+</div>
+
+

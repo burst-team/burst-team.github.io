@@ -1,0 +1,122 @@
+---
+layout: page
+title: Team
+permalink: /team/
+group: "nav"
+members:
+ - name: "crowetic"
+   role: "Team leader"
+   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet, massa at malesuada ultricies, justo orci luctus eros, eu vulputate nisl sapien non tellus. Quisque eget vestibulum ex."
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "DCCT"
+   role: "Core dev"
+   description: "DCCT has been with us since the very beginning of the coin, and has done some amazing things for BURST, including one of the best miners ever. He is now helping us by becoming the official core dev, main developer for BURST."
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "Fuse"
+   role: "AT dev"
+   description: "Fuse came to us with some great pointers, and has already implemented the changes he suggested to the code, and will be put into the next release of BURST wallet."
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "vbcs"
+   role: "AT dev"
+   description: "vbcs as you all know has been around since day one as well, and since the CF I started for him was a success, has made him very happy, and he agreed to work with BURST continually as part of the team, we are very happy to have him as he is a fantastic dev"
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "clepto.design"
+   role: "Graphics designer"
+   description: "I have found a designer that is a personal friend of mine, and started him a company which I will be posting a temporary page for soon on clepto.design. We've decided he will be a tremendous help with graphics. We thank him for what he has done so far that people will see shortly, and we know he will be a great asset in the future! "
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "daWallet"
+   role: "Wallet dev"
+   description: "daWallet has already proven himself to be a massively beneficial member to the BURST team, and has been extremely valuable and trustworthy. he has made BURST MUCH easier to use with his Windows GUI, and continually releases updates. He is also currently working on ANDROID DEVELOPMENT!"
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "luxe"
+   role: "Miner / core dev"
+   description: "luxe has proven himself to be extremely valuable with GPU miner release and much more, he is also currently helping dcct with core dev. We are extremely proud to have him on our team. We think he will continue to prove himself a fantastic dev and great asset to the team!"
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "haitch"
+   role: "Infrastructure"
+   description: "haitch is a great infrastructure dev who is also a good friend of mine, we both work together to continually make the core of the infrastructure that runs many BURST services better, and will continue to do so. Haitch is a better code reader than I am, but I'm getting there. I'm also working on DNS and domain info for BURST, and SSL and soforth, with haitch. We'll continually make things better from the ground up!"
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "Blago"
+   role: "Infrastructure"
+   description: "Blago has been around for quite some  time and has proven himself not only the most awesome of miner devs, but also, the most Russian! heh. We love blago and are very pleased to have him as part of our team! Thank you blago!"
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ - name: "irontiga"
+   role: "Website / UI dev"
+   description: "Cryptocurrency enthusiast and friend of crowetic for over a year, irontiga is responsible for this website and the fractal core UI. He is a self taught developer focusing on web technologies."
+   website: ""
+   contact: ""
+   picture: "irontiga.png"
+   background: "irontiga_blur.png"
+ - name: "Join us!"
+   role: "Employee"
+   description: "Are you a Rust expert? A web developer? A security guru? Get in touch, and join the team!"
+   website: ""
+   contact: ""
+   picture: "user.png"
+   background: "user_blur.png"
+ 
+---
+
+<div class="row">
+	<div class="col s12 m12">
+		<h1 class="accent-text thin center">Team</h1>
+	</div>
+</div>
+
+<div class="row">
+	{% for member in page.members %}
+		<div class="col s12 m6">
+			<div class="card white black-text">
+				<div style="height:250px; overflow:hidden;" class="card-image">
+					<img src="{{site.baseurl}}/img/profile/{{member.background}}">
+					<span style="width:100%;" class="card-title">
+						<img class="circle left" style="height:80px; width:80px; display:inline; border-radius:50% 50%;" src="{{site.baseurl}}/img/profile/{{member.picture}}">
+						<span style="padding-left:10px; color:#333;">
+							{{member.name}}
+							<br>
+							<small style="padding-left:10px; font-size:12px;">
+								<b>{{member.role}}</b>
+							</small>
+						</span>
+					</span>
+				</div>
+				<div class="card-content nano">
+					<div class="nano-content primary-text text-darken-3">
+						<p>{{member.description}}</p>
+					</div>
+				</div>
+				<div class="card-action">
+					<a class="accent-text" href="{{member.website}}">Website</a>
+					<a class="accent-text right" href="{{member.contact}}">Contact</a>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

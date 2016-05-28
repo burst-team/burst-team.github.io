@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="container">
+
+  <div class="card white primary-text text-darken-2">
+	  <div class="card-content">
+		  <span class="accent-text card-title thin">{{ page.title }}</span>
+		  <br>
+		  <i>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</i>
+	  </div>
+	  
+	  <div class="divider"></div>
+
+	  <div class="card-content">
+		  <article class="post-content">
+			  {{ content }}
+		  </article>
+	  </div>
+	</div>
+	
+	
+</div>

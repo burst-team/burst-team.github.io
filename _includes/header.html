@@ -1,0 +1,34 @@
+<div id='preloader'>
+	<div class="progress">
+		<div class="indeterminate accent"></div>
+	</div>
+</div>
+
+<header class="site-header" style="position:fixed; width:100%; z-index:1000; top:0;">
+	<div class='top-nav' id="navbar">
+		<nav>
+			<div class="nav-wrapper">
+				<div class='container'>
+					<a href="{{site.baseurl}}/" class="internal-link brand-logo primary-text text-lighten-3 thin">
+						<img src='{{ site.baseurl }}/img/logo.png'>
+					</a>
+					<a data-activates="mobile-menu" class="button-collapse"><i class="material-icons accent-text">menu</i></a>
+					<ul class="right hide-on-med-and-down desktop-navigation">
+						{% assign navType = 'desktop' %}
+						{% include nav.html %}
+						<!-- <li><a class="waves-effect waves-light accent btn text-white" href="/download/">Download</a></li> -->
+						<div class="active-indicator"></div>
+					</ul>
+				</div>
+				<ul class="side-nav" id="mobile-menu">
+					{% assign navType = 'mobile' %}
+					{% include nav.html %}
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<div id='page-body'>
+	<div id='page-body-inner'>
+		<main>
