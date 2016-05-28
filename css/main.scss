@@ -244,9 +244,9 @@ nav {
 		font-weight: 500;
 		&.active{
 			background-color: transparent;
-			color: map-get($primary,darken-2) !important;
+			color: map-get($primary,darken-3) !important;
 		}
-		color: map-get($primary,lighten-1)
+		color: map-get($primary,base)
 	}
 	.collapsible-body{
 		padding-left:15px;
@@ -258,16 +258,16 @@ nav {
 			a{
 				line-height:30px;
 				height:30px;
-				color: map-get($primary,lighten-2);
+				color: map-get($primary,base);
 			}
 			&.active, &:hover{
 				border-left:3px solid $accent-base;
 				background-color: transparent;
 				a{
-					color: map-get($primary,darken-2);
+					color: map-get($primary,darken-3);
 				}
 				> a{
-					color: map-get($primary,darken-2);
+					color: map-get($primary,darken-3);
 				}
 			}
 		}

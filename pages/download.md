@@ -27,8 +27,8 @@ group: "nav"
 		<h1><i class="material-icons">storage</i></h1>
 		<h4>Miner</h4>
 		<ul>
-			<li><a href="">Fractal_Whitepaper.PDF</a></li>
-			<li><a href="">Fractal_Whitepaper.DOCX</a></li>
+			<li><a href="">64 bit miner</a></li>
+			<li><a href="">GPU miner</a></li>
 		</ul>
 	</div>
 </div>
