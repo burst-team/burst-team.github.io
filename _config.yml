@@ -2,7 +2,7 @@
 title: Burst
 email: jason@crowetic.com
 description: > # this means to ignore newlines until "baseurl:"
-    Fractal.Global
+    Burst, a revolutionary coin.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://burstcoin.info" # the base hostname & protocol for your site
 twitter_username: 
